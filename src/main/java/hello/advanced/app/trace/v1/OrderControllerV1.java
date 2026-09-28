@@ -1,23 +1,23 @@
-package hello.advanced.app.v3;
+package hello.advanced.app.trace.v1;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import hello.advanced.trace.TraceStatus;
-import hello.advanced.trace.logtrace.LogTrace;
+import hello.advanced.trace.hellotrace.HelloTraceV1;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-public class OrderControllerV3 {
-	private final OrderServiceV3 orderService;
-	private final LogTrace trace;
+public class OrderControllerV1 {
+	private final OrderServiceV1 orderService;
+	private final HelloTraceV1 trace;
 
-	@GetMapping("/v3/request")
+	@GetMapping("/v1/request")
 	public String request(String itemId) {
 		TraceStatus status = null;
 		try {
-			status = trace.begin("OrderControllerV3.request()");
+			status = trace.begin("OrderControllerV1.request()");
 			orderService.orderItem(itemId);
 			trace.end(status);
 			return "ok";

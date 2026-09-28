@@ -1,4 +1,4 @@
-package hello.advanced.app.v1;
+package hello.advanced.app.trace.v1;
 
 import org.springframework.stereotype.Service;
 
