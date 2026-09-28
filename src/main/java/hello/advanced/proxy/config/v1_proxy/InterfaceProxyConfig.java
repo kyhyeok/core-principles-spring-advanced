@@ -11,6 +11,7 @@ import hello.advanced.proxy.app.v1.OrderRepositoryV1;
 import hello.advanced.proxy.app.v1.OrderRepositoryV1Impl;
 import hello.advanced.proxy.app.v1.OrderServiceV1;
 import hello.advanced.proxy.app.v1.OrderServiceV1Impl;
+import hello.advanced.proxy.app.v2.OrderControllerV2;
 import hello.advanced.proxy.config.v1_proxy.interface_proxy.OrderControllerInterfaceProxy;
 import hello.advanced.proxy.config.v1_proxy.interface_proxy.OrderRepositoryInterfaceProxy;
 import hello.advanced.proxy.config.v1_proxy.interface_proxy.OrderServiceInterfaceProxy;
@@ -45,7 +46,8 @@ public class InterfaceProxyConfig {
 				return new RequestMappingHandlerMapping() {
 					@Override
 					protected boolean isHandler(Class<?> beanType) {
-						return super.isHandler(beanType) || OrderControllerV1.class.isAssignableFrom(beanType);
+						return super.isHandler(beanType) || OrderControllerV1.class.isAssignableFrom(beanType)
+							|| OrderControllerV2.class.isAssignableFrom(beanType);
 					}
 				};
 			}
