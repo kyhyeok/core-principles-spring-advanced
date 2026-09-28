@@ -29,14 +29,15 @@ public class AppV2Config {
 	}
 
 	@Bean
-	public WebMvcRegistrations webMvcRegistrations() {
+	public WebMvcRegistrations webMvcRegistrationsV2() {
 		return new WebMvcRegistrations() {
 			@Override
 			public RequestMappingHandlerMapping getRequestMappingHandlerMapping() {
 				return new RequestMappingHandlerMapping() {
 					@Override
 					protected boolean isHandler(Class<?> beanType) {
-						return super.isHandler(beanType) || OrderControllerV2.class.isAssignableFrom(beanType);
+						return super.isHandler(beanType) || OrderControllerV1.class.isAssignableFrom(beanType)
+							|| OrderControllerV2.class.isAssignableFrom(beanType);
 					}
 				};
 			}
