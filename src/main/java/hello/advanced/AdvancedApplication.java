@@ -1,18 +1,22 @@
 package hello.advanced;
 
+import java.util.function.DoubleUnaryOperator;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 import hello.advanced.proxy.config.v1_proxy.ConcreteProxyConfig;
+import hello.advanced.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
 import hello.advanced.trace.logtrace.LogTrace;
 import hello.advanced.trace.logtrace.ThreadLocalLogTrace;
 
 // @Import(AppV1Config.class)
 // @Import({AppV1Config.class, AppV2Config.class})
 // @Import(InterfaceProxyConfig.class)
-@Import(ConcreteProxyConfig.class)
+// @Import(ConcreteProxyConfig.class)
+@Import(DynamicProxyBasicConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.advanced.proxy.app")
 public class AdvancedApplication {
 
