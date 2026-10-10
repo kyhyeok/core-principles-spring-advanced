@@ -1,4 +1,4 @@
-package hello.advanced.proxy.config.v2_dynamicproxy.handler;
+package hello.advanced.proxy.config.v2_dynamicproxy;
 
 import java.lang.reflect.Proxy;
 
@@ -15,6 +15,7 @@ import hello.advanced.proxy.app.v1.OrderRepositoryV1Impl;
 import hello.advanced.proxy.app.v1.OrderServiceV1;
 import hello.advanced.proxy.app.v1.OrderServiceV1Impl;
 import hello.advanced.proxy.app.v2.OrderControllerV2;
+import hello.advanced.proxy.config.v2_dynamicproxy.handler.LogTraceFilterHandler;
 import hello.advanced.trace.logtrace.LogTrace;
 
 @Configuration
