@@ -20,8 +20,8 @@ import hello.advanced.trace.logtrace.ThreadLocalLogTrace;
 // @Import(ProxyFactoryConfigV2.class)
 // @Import(BeanPostProcessorConfig.class)
 // @Import(AutoProxyConfig.class)
-@Import(AopConfig.class)
-@SpringBootApplication(scanBasePackages = "hello.advanced.proxy.app")
+// @Import(AopConfig.class)
+@SpringBootApplication(scanBasePackages = {"hello.advanced.proxy.app", "hello.advanced.aop"})
 public class AdvancedApplication {
 
 	public static void main(String[] args) {
