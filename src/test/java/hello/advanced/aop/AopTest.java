@@ -12,11 +12,13 @@ import org.springframework.context.annotation.Import;
 import hello.advanced.aop.order.OrderRepository;
 import hello.advanced.aop.order.OrderService;
 import hello.advanced.aop.order.aop.AspectV1;
+import hello.advanced.aop.order.aop.AspectV2;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootTest
-@Import({AspectV1.class})
+// @Import({AspectV1.class})
+@Import({AspectV2.class})
 public class AopTest {
 
 	@Autowired
