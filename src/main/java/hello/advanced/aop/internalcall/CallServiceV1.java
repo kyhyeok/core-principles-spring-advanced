@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 public class CallServiceV1 {
-
+	/*
 	private CallServiceV1 callServiceV1;
 
 	// 자기 자신(프록시)을 주입받아 내부 호출도 AOP가 적용되게 함
@@ -21,10 +21,11 @@ public class CallServiceV1 {
 
 	public void external() {
 		log.info("call external");
-		callServiceV1.internal(); //내부 메서드 호출(this.internal())
+		callServiceV1.internal(); //외부 메서드 호출
 	}
 
 	public void internal() {
 		log.info("call internal");
 	}
+	*/
 }

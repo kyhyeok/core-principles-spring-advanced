@@ -13,11 +13,11 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest
 public class CallServiceV1Test {
 
-	@Autowired
-	CallServiceV1 callServiceV1;
-
-	@Test
-	void external() {
-		callServiceV1.external();
-	}
+	// @Autowired
+	// CallServiceV1 callServiceV1;
+	//
+	// @Test
+	// void external() {
+	// 	callServiceV1.external();
+	// }
 }
